@@ -1,0 +1,307 @@
+/* ----------------------------------------- */
+/*  GLOBAL THEME VARIABLES                   */
+/* ----------------------------------------- */
+:root {
+  --bg: #0f1724;
+  --text: #e6eef6;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #6ee7b7;
+  --glass: rgba(255, 255, 255, 0.06);
+  --radius: 12px;
+  --max-width: 1100px;
+
+  --whatsapp: #25d366;
+  --call-btn: #1e90ff;
+}
+
+/* Light mode override */
+body.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #f3f3f3;
+  --muted: #555;
+  --accent: #2563eb;
+}
+
+/* ----------------------------------------- */
+/*  BASE                                     */
+/* ----------------------------------------- */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.25s background, 0.25s color;
+}
+
+a { text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px;
+}
+
+
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+/* ----------------------------------------- */
+/*  NAVBAR                                   */
+/* ----------------------------------------- */
+header {
+  background: var(--glass);
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #042;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+nav ul li a {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.resume-btn {
+  background: var(--accent);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #042;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--text);
+}
+
+@media (max-width: 880px) {
+  nav ul { display: none; }
+  .hamburger { display: inline-flex; }
+}
+
+/* ----------------------------------------- */
+/*  HERO SECTION                              */
+/* ----------------------------------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 28px;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.intro p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cta {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #042;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--glass);
+  color: var(--text);
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ----------------------------------------- */
+/*  ABOUT / PROJECTS / SKILLS / CONTACT      */
+/* ----------------------------------------- */
+h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+.muted { color: var(--muted); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.proj {
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag {
+  padding: 6px 10px;
+  background: var(--glass);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  padding: 10px 16px;
+  background: var(--glass);
+  border-radius: 8px;
+}
+
+/* Contact form */
+form input,
+form textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+/* ----------------------------------------- */
+/*  FLOATING BUTTONS (WHATSAPP + CALL)       */
+/* ----------------------------------------- */
+
+.float-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--whatsapp);
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+.float-call {
+  position: fixed;
+  right: 20px;
+  bottom: 90px; /* above WhatsApp button */
+  background: var(--call-btn);
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+/* ----------------------------------------- */
+/*  DARK / LIGHT MODE BUTTON                 */
+/* ----------------------------------------- */
+
+.theme-toggle {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  border: 1px solid rgba(255,255,255,0.1);
+  z-index: 999;
+}
+
+/* ----------------------------------------- */
+/*  ANIMATIONS (Fade Up)                     */
+/* ----------------------------------------- */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}

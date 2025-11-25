@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jay's Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- 🌙 DARK / LIGHT MODE SWITCH -->
+  <div class="theme-toggle" id="themeToggle">🌙</div>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/917069550828" target="_blank" class="float-whatsapp">💬</a>
+
+  <a href="tel:+917069550828" class="float-call">📞</a>
+
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="card fade-up">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">JB</div>
+          <div>
+            <div style="font-weight:700">Jay Buddhbhatti</div>
+            <div class="muted" style="font-size:12px">Frontend Developer</div>
+          </div>
+        </div>
+
+        <nav>
+          <button class="hamburger" id="hamb">☰</button>
+          <ul id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <!-- Download Resume -->
+            <li>
+              <a class="resume-btn" href="https://docs.google.com/document/d/1Q2WbGYIx9sMJ0kxE9gsHDSlymkFjIocY/export?format=pdf
+      " download>⬇ Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero fade-up">
+      <div class="intro">
+        <h1 class="fade-up">Hi — I’m Jay. I build modern & responsive web apps.</h1>
+        <p class="muted fade-up">
+          I specialize in clean UI, animations, responsive layouts & fast websites.
+        </p>
+
+        <div class="cta fade-up">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+
+        <div class="card fade-up" style="margin-top:22px">
+          <div style="font-size:13px;color:var(--muted)">Current focus</div>
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+            <div class="tag">React</div>
+            <div class="tag">Tailwind</div>
+            <div class="tag">JavaScript</div>
+            <div class="tag">Responsive UI</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card fade-up" style="text-align:center">
+        <img src="my photo.jpg" style="width:100%;border-radius:10px;margin-bottom:12px"/>
+        <div style="font-weight:700">Available for freelance</div>
+        <div class="muted" style="font-size:13px">Remote & On-site</div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="fade-up">
+      <div class="card">
+        <h3>About Me</h3>
+        <p class="muted">
+          Passionate frontend developer with focus on clean, modern UI & smooth animations.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h4>Experience</h4>
+            <p class="muted">Frontend Development</p>
+          </div>
+
+          <div>
+            <h4>Education</h4>
+            <p class="muted">BCA – 65%</p>
+            <p class="muted">12th – 55%</p>
+            <p class="muted">10th – 60%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="fade-up">
+      <h3>Projects</h3>
+
+      <div class="projects-grid fade-up">
+        <article class="proj card">
+          <h4>Portfolio Website</h4>
+          <p class="muted">Responsive portfolio with animations.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+          </div>
+        </article>
+
+        <article class="proj card">
+          <h4>E-commerce UI</h4>
+          <p class="muted">Modern shopping interface mock.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">API</span>
+          </div>
+        </article>
+
+        <article class="proj card">
+          <h4>Chat App</h4>
+          <p class="muted">Realtime chat interface.</p>
+          <div class="tags">
+            <span class="tag">Node</span>
+            <span class="tag">Socket</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="fade-up">
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">UI/UX</div>
+        <div class="skill">Git</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="fade-up">
+      <h3>Contact</h3>
+      <div class="card">
+        <form id="contactForm">
+          <input name="name" placeholder="Your Name" required />
+          <input name="email" type="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="btn btn-primary">Send Message</button>
+          <div id="formMsg" class="muted"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="fade-up">
+      © <span id="year"></span> Jay Buddhbhatti • Made with ❤️
+    </footer>
+    
+
+
+  </div>
+</body>
+</html>
